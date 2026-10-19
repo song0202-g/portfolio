@@ -508,20 +508,21 @@ img { display: block; }
           <div class="card-top">
             <span class="card-no">01</span>
             <div class="card-head">
-              <span class="card-cat">Computer Vision</span>
+              <span class="card-cat">Computer Vision · 4인 팀 프로젝트</span>
               <h3>저조도 영상 개선 + 객체 탐지</h3>
             </div>
-            <a class="btn-ghost" href="https://github.com/song0202-g" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn-ghost" href="https://github.com/song0202-g/low-light-enhancement" target="_blank" rel="noopener">GitHub</a>
           </div>
           <div class="card-body">
             <div class="card-col">
               <h4>Overview</h4>
-              <p>저조도 사진 데이터와 정답 데이터를 활용해 저조도 영상의 조도를 개선하고, 개선된 영상에서 YOLO로 객체를 탐지했습니다. 기존 조도 개선 모델(TriFuseLite)과 직접 구현한 모델(TriFuseSimple)을 비교한 결과, 탐지 시간은 비슷했지만 복원 속도가 크게 앞서 실시간 분석이 가능한 직접 구현 모델을 채택했습니다.</p>
+              <p>저조도 사진 데이터와 정답 데이터를 활용해 저조도 영상의 조도를 개선하고, 개선된 영상에서 YOLO로 객체를 탐지했습니다. 기존 조도 개선 모델(TriFuseLite)과 직접 구현한 모델(TriFuseSimple)을 비교한 결과, 탐지 시간은 비슷했지만 복원 속도가 약 11.5배 빨라 영상 처리에 더 적합한 직접 구현 모델을 채택했습니다.</p>
             </div>
             <div class="card-col">
               <h4>My Role</h4>
               <ul>
-                <li>기존 모델과 직접 구현한 모델의 처리 속도·복원 시간·탐지 시간 비교 → 더 나은 모델 선택</li>
+                <li>경량 CNN 복원 모델 TrifuseSimple 설계·구현·학습</li>
+                <li>기존 모델과 처리 속도·복원 시간·화질(SSIM·NIQE) 비교 → 더 나은 모델 선택</li>
                 <li>선택한 모델의 결과(조도 개선 영상)에 YOLO 객체 탐지 적용</li>
               </ul>
               <div class="tags"><span>Low-Light Enhancement</span><span>Model Comparison</span><span>YOLO</span></div>
@@ -542,11 +543,11 @@ img { display: block; }
               <span class="m-val"><s>약 40분</s><b>약 4분</b></span>
             </div>
             <div class="metric">
-              <span class="m-label">실시간 분석</span>
-              <span class="m-val"><s>불가능</s><b>가능</b></span>
+              <span class="m-label">실제 야간 사진 NIQE</span>
+              <span class="m-val"><s>5.38</s><b>4.75</b></span>
             </div>
           </div>
-          <p class="metrics-note">기존 TriFuseLite → <em>직접 구현 TriFuseSimple</em> · 18초(30fps) 영상 기준 · 평균 YOLO 탐지 시간은 0.0189s / 0.0154s로 비슷</p>
+          <p class="metrics-note">기존 TriFuseLite → <em>직접 구현 TriFuseSimple</em> · 18초(30fps) 영상 기준 · 평균 YOLO 탐지 시간은 0.0189s / 0.0154s로 비슷 · NIQE는 낮을수록 자연스러운 화질</p>
 
           <div class="vids" data-sync>
             <figure class="vid vid-main">
