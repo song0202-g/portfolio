@@ -23,7 +23,7 @@ images/           ← 프로젝트 결과 이미지
 | 항목 | 위치 |
 |---|---|
 | 프로젝트별 GitHub 링크 (지금은 프로필 주소) | `index.html` — 프로젝트 카드 2곳의 `https://github.com/song0202-g` |
-| 이메일 | `index.html` Contact 섹션의 `mailto:` |
+| 이메일 | `index.html` 첫 화면 인적사항 패널의 Email 줄 |
 
 ## 프로젝트 이미지 · 영상
 

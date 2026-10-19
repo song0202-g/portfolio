@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Song Kyounggeun Portfolio</title>
-  <meta name="description" content="빅데이터 분석 직무 포트폴리오 — 시계열 예측, 상관분석, 저조도 영상 개선, 객체 탐지 프로젝트" />
+  <meta name="description" content="송경근 AI · 빅데이터 직무 포트폴리오 — 저조도 영상 개선, 객체 탐지, SARIMA 시계열 예측 프로젝트" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
@@ -93,7 +93,6 @@ img { display: block; }
   margin-top: auto; display: flex; flex-direction: column; align-items: stretch;
   padding: 0 1rem 1.5rem; position: relative; z-index: 20; gap: 1rem;
 }
-.hero-bottom > .fade:last-child { align-self: flex-start; }
 .hero-profile {
   border-radius: 24px; padding: 1.1rem 1.15rem 1rem; border: 1px solid rgba(215,226,234,.14);
   background: rgba(18,18,20,.62); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
@@ -116,7 +115,6 @@ img { display: block; }
   .hero-title { font-size: 13vw; margin-top: 1rem; }
   .hero-visual { width: 280px; }
   .hero-bottom { padding: 0 2rem 2rem; flex-direction: row; align-items: flex-end; justify-content: space-between; }
-  .hero-bottom > .fade:last-child { align-self: auto; }
   .hero-profile { max-width: 420px; flex: 1; }
 }
 @media (min-width: 768px) {
@@ -391,7 +389,6 @@ img { display: block; }
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
     </nav>
 
     <div class="hero-title-box">
@@ -410,16 +407,13 @@ img { display: block; }
     <div class="hero-bottom">
       <div class="hero-profile fade" data-y="20" data-delay="0.35">
         <p class="hp-name"><span class="name">SONG KYOUNGGEUN</span><span class="hp-ko">송경근</span></p>
-        <p class="hp-role">빅데이터 분석 직무 신입 지원자</p>
+        <p class="hp-role">AI · 빅데이터 직무 신입 지원자</p>
         <dl class="hp-list">
           <div class="hp-row"><dt>학력</dt><dd>한남대학교 재학 중<span class="hp-sub">2027.02 졸업 예정</span></dd></div>
           <div class="hp-row"><dt>전공</dt><dd><span class="hp-major">AI융합학과 <em>주전공</em></span><span class="hp-major">빅데이터응용학과 <em>다전공</em></span></dd></div>
           <div class="hp-row"><dt>Email</dt><dd>ksii201400@gmail.com</dd></div>
           <div class="hp-row"><dt>GitHub</dt><dd><a href="https://github.com/song0202-g" target="_blank" rel="noopener">github.com/song0202-g</a></dd></div>
         </dl>
-      </div>
-      <div class="fade" data-y="20" data-delay="0.5">
-        <a class="btn-contact" href="#contact">Contact Me</a>
       </div>
     </div>
   </section>
@@ -465,7 +459,6 @@ img { display: block; }
         <h2 class="hero-heading section-title fade" data-y="40">About me</h2>
         <p class="animated-text" id="aboutText">한남대학교에서 AI융합학과를 주전공하고 빅데이터응용학과를 다전공하고 있습니다. 정보처리기사를 취득하고 빅데이터분석기사 필기에 합격해 지금은 실기를 준비하고 있습니다. 저조도 영상 개선과 객체 탐지, 방한 관광 입국 비율의 SARIMA 시계열 예측 프로젝트를 수행하며 데이터를 근거로 모델을 비교하고 선택하는 경험을 쌓았습니다. 데이터로 더 나은 의사결정을 만드는 분석가가 되겠습니다.</p>
       </div>
-      <div class="fade" data-y="20"><a class="btn-contact" href="#contact">Contact Me</a></div>
     </div>
   </section>
 
@@ -651,18 +644,6 @@ img { display: block; }
     </div>
   </section>
 
-  <!-- ============ 6. CONTACT ============ -->
-  <section class="contact" id="contact">
-    <h2 class="hero-heading section-title fade" data-y="40">Contact</h2>
-    <p class="contact-sub fade" data-y="20" data-delay="0.1">함께 데이터로 문제를 풀 기회를 기다리고 있습니다.</p>
-    <div class="contact-links fade" data-y="20" data-delay="0.2">
-      <a class="btn-contact email-text" href="mailto:ksii201400@gmail.com">ksii201400@gmail.com</a>
-      <button type="button" class="btn-ghost copy-btn" id="copyEmail" data-email="ksii201400@gmail.com">Copy</button>
-      <a class="btn-ghost" href="https://github.com/song0202-g" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <p class="copy">© 2026 <span class="name">SONG KYOUNGGEUN</span></p>
-  </section>
-
 </main>
 <script>
 /* =========================================================
@@ -828,23 +809,6 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
         if (Math.abs(v.currentTime - main.currentTime) > 0.25) v.currentTime = main.currentTime;
       });
     });
-  });
-})();
-
-/* ---------- 이메일 복사 ---------- */
-(function copyEmail() {
-  const btn = document.getElementById('copyEmail');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    const email = btn.dataset.email;
-    const done = () => { btn.textContent = 'Copied'; setTimeout(() => (btn.textContent = 'Copy'), 1800); };
-    const fallback = () => {
-      const el = document.querySelector('.email-text');
-      const r = document.createRange(); r.selectNodeContents(el);
-      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
-      btn.textContent = 'Ctrl+C로 복사';
-    };
-    try { navigator.clipboard.writeText(email).then(done, fallback); } catch (e) { fallback(); }
   });
 })();
 
