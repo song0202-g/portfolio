@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Song Kyounggeun Portfolio</title>
-  <meta name="description" content="송경근 AI · 빅데이터 직무 포트폴리오 — 저조도 영상 개선, 객체 탐지, SARIMA 시계열 예측 프로젝트" />
+  <meta name="description" content="송경근 AI · 빅데이터 직무 포트폴리오 — 저조도 영상 개선, 객체 탐지, SARIMA 시계열 예측, R 분류 모델 프로젝트" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
@@ -316,6 +316,11 @@ img { display: block; }
 .pt-row.pt-4 { grid-template-columns: 1.1fr 1.5fr .7fr .7fr; }
 .pt-row.pt-4 span:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
 .charts.charts-stack { grid-template-columns: 1fr !important; }
+.pt-row.pt-m { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
+.pt-row.pt-m span:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+@media (min-width: 768px) { .charts.charts-2 { grid-template-columns: 1fr 1fr; align-items: start; } }
+@media (min-width: 768px) and (max-width: 1023px) { .marquee-row.r3 .tile:last-child { grid-column: 1 / -1; } }
+@media (min-width: 1024px) { .marquee-row.r3 { grid-template-columns: repeat(3, 1fr); } }
 .charts-stack .charts-l { grid-template-columns: 1fr; }
 @media (min-width: 768px) { .charts-stack .charts-l { grid-template-columns: 1fr 1fr; } }
 .charts { display: grid; grid-template-columns: 1fr; gap: .75rem; align-items: center; }
@@ -468,7 +473,7 @@ img { display: block; }
     <div class="about-inner">
       <div class="about-text">
         <h2 class="hero-heading section-title fade" data-y="40">About me</h2>
-        <p class="animated-text" id="aboutText">한남대학교에서 AI융합학과를 주전공하고 빅데이터응용학과를 다전공하고 있습니다. 정보처리기사를 취득하고 빅데이터분석기사 필기에 합격해 지금은 실기를 준비하고 있습니다. 저조도 영상 개선과 객체 탐지, 방한 관광 입국자 수 SARIMA 시계열 예측 프로젝트를 수행하며 데이터를 근거로 모델을 비교하고 선택하는 경험을 쌓았습니다. 데이터로 더 나은 의사결정을 만드는 분석가가 되겠습니다.</p>
+        <p class="animated-text" id="aboutText">한남대학교에서 AI융합학과를 주전공하고 빅데이터응용학과를 다전공하고 있습니다. 정보처리기사를 취득하고 빅데이터분석기사 필기에 합격해 지금은 실기를 준비하고 있습니다. 저조도 영상 개선과 객체 탐지, 방한 관광 입국자 수 SARIMA 시계열 예측, R을 활용한 심장병 여부 분류 프로젝트를 수행하며 데이터를 근거로 모델을 비교하고 선택하는 경험을 쌓았습니다. 데이터로 더 나은 의사결정을 만드는 분석가가 되겠습니다.</p>
       </div>
     </div>
   </section>
@@ -494,7 +499,6 @@ img { display: block; }
         <div class="skill-main">
           <h3>R</h3>
           <p>탐색적 분석과 전처리(결측 대체·원-핫 인코딩·표준화)를 거쳐 랜덤 포레스트, SVM, 로지스틱 회귀로 분류 모델을 만들고, 혼동행렬과 민감도·특이도로 비교합니다.</p>
-          <a class="skill-link" href="https://github.com/song0202-g/heart-disease-prediction-r" target="_blank" rel="noopener">심장병 여부 예측 프로젝트 (R) <span aria-hidden="true">↗</span></a>
         </div>
         <div class="skill-tags"><span>caret</span><span>분류 모델</span><span>로지스틱 회귀</span></div>
       </li>
@@ -654,6 +658,73 @@ img { display: block; }
           </div>
         </article>
       </div>
+
+      <!-- Project 03 -->
+      <div class="card-holder">
+        <article class="card" data-index="2">
+          <div class="card-top">
+            <span class="card-no">03</span>
+            <div class="card-head">
+              <span class="card-cat">Machine Learning · R · 4인 팀 프로젝트</span>
+              <h3>심장병 여부 예측 — 분류 모델 비교</h3>
+            </div>
+            <a class="btn-ghost" href="https://github.com/song0202-g/heart-disease-prediction-r" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="card-body">
+            <div class="card-col">
+              <h4>Overview</h4>
+              <p>환자 918명의 나이·혈압·콜레스테롤·심전도 등 11개 변수로 심장병 여부를 분류했습니다. R로 탐색적 분석과 전처리를 거쳐 랜덤 포레스트, SVM(선형·RBF), 로지스틱 회귀를 같은 데이터 분할로 학습하고, 의료 데이터에서 가장 중요한 민감도(환자를 놓치지 않는 비율)를 중심으로 비교했습니다.</p>
+            </div>
+            <div class="card-col">
+              <h4>Process</h4>
+              <ul>
+                <li>불가능한 값(콜레스테롤 0, 172건)을 결측으로 보고 중앙값 대체</li>
+                <li>원-핫 인코딩·표준화 후 계층 샘플링으로 train 80% / test 20% 분리</li>
+                <li>4개 분류 모델의 혼동행렬로 정확도·민감도·특이도 비교</li>
+              </ul>
+              <div class="tags"><span>R · caret</span><span>Random Forest</span><span>SVM</span><span>Logistic Regression</span></div>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <div class="metric"><span class="m-label">데이터</span><span class="m-val"><b>918명</b><i>11개 변수</i></span></div>
+            <div class="metric"><span class="m-label">비교 모델</span><span class="m-val"><b>4개</b><i>RF · SVM 2종 · 로지스틱</i></span></div>
+            <div class="metric"><span class="m-label">최고 정확도</span><span class="m-val"><b>88.5%</b><i>랜덤 포레스트</i></span></div>
+            <div class="metric"><span class="m-label">최고 민감도</span><span class="m-val"><b>92.1%</b><i>SVM RBF · 놓친 환자 8명</i></span></div>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <span class="f-no">01 · 모델 비교</span>
+              <p>네 모델 모두 정확도 87~89%로, 다수 클래스만 고르는 기준(55.2%)보다 유의하게 높았습니다. 랜덤 포레스트가 정확도와 특이도에서 가장 균형이 좋았습니다.</p>
+            </div>
+            <div class="finding">
+              <span class="f-no">02 · 민감도 기준 선택</span>
+              <p>환자를 놓치지 않는 민감도는 SVM RBF가 92.1%로 가장 높았지만, 정상인을 환자로 잘못 분류한 경우도 15명으로 가장 많았습니다. 목적에 따라 모델 선택이 달라짐을 확인했습니다.</p>
+            </div>
+            <div class="finding">
+              <span class="f-no">03 · 재검토로 바로잡은 점</span>
+              <p>caret의 confusionMatrix는 첫 번째 레벨(정상)을 기준으로 잡아 민감도와 특이도가 뒤바뀌어 출력됐습니다. 이를 발견해 positive를 심장병으로 지정하고 결과와 결론을 다시 정리했습니다.</p>
+            </div>
+          </div>
+
+          <div class="purpose">
+            <h4>모델별 성능 · test 183명 (정상 82 / 심장병 101)</h4>
+            <div class="purpose-table">
+              <div class="pt-row pt-head pt-m"><span>모델</span><span>정확도</span><span>민감도</span><span>특이도</span></div>
+              <div class="pt-row pt-m"><span>랜덤 포레스트</span><span>88.5%</span><span>90.1%</span><span>86.6%</span></div>
+              <div class="pt-row pt-m"><span>SVM 선형</span><span>87.9%</span><span>89.1%</span><span>86.6%</span></div>
+              <div class="pt-row pt-m pt-hl"><span>SVM RBF</span><span>87.4%</span><span>92.1%</span><span>81.7%</span></div>
+              <div class="pt-row pt-m"><span>로지스틱 회귀</span><span>87.9%</span><span>89.1%</span><span>86.6%</span></div>
+            </div>
+          </div>
+
+          <div class="charts charts-2">
+            <figure class="chart"><img src="images/p3-1.png" alt="연속형 변수 5개의 분포 히스토그램" loading="lazy"><figcaption>① 연속형 변수 분포 — 콜레스테롤 0 값(결측) 확인</figcaption></figure>
+            <figure class="chart"><img src="images/p3-2.png" alt="랜덤 포레스트 변수 중요도" loading="lazy"><figcaption>② 랜덤 포레스트 변수 중요도 — ST 기울기, 최대 심박수, Oldpeak 순</figcaption></figure>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -673,6 +744,7 @@ const MARQUEE_ROW_1 = [
 const MARQUEE_ROW_2 = [
   ['Project 01', '저조도 영상 개선', '직접 구현한 조도 개선 모델과 기존 모델의 성능을 비교해 더 나은 모델을 채택하고, 개선된 영상에 YOLO 객체 탐지를 적용했습니다.'],
   ['Project 02', '방한 관광 입국자 수 예측', '1998~2019년 목적별 월별 입국자 수로 SARIMA를 학습해 코로나 이후 목적별 회복 정도를 비교하고, 환율은 입국자 수에 유의한 영향이 없음을 확인했습니다.'],
+  ['Project 03', '심장병 여부 예측 (R)', 'R로 랜덤 포레스트, SVM, 로지스틱 회귀를 학습해 정확도와 민감도·특이도로 비교했습니다.'],
 ];
 
 /* ---------- 히어로 제목을 화면 너비에 꼭 맞추기 ---------- */
@@ -738,7 +810,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 
 /* ---------- Marquee ---------- */
 (function marquee() {
-  // 자격증 2개, 프로젝트 2개를 한 번씩만 보여줍니다
+  // 자격증 2개, 프로젝트 3개를 한 번씩만 보여줍니다
   const section = document.getElementById('marquee');
   const rows = section.querySelectorAll('.marquee-row');
   const make = (list) => list.map(([kicker, title, desc]) =>
@@ -746,6 +818,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   ).join('');
   rows[0].innerHTML = make(MARQUEE_ROW_1);
   rows[1].innerHTML = make(MARQUEE_ROW_2);
+  if (MARQUEE_ROW_2.length === 3) rows[1].classList.add('r3');
   const tiles = section.querySelectorAll('.tile');
   if (reduceMotion) { tiles.forEach((t) => t.classList.add('in')); return; }
   tiles.forEach((t, i) => { t.style.transitionDelay = `${(i % 2) * 0.12}s`; });
