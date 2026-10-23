@@ -22,7 +22,7 @@ images/           ← 프로젝트 결과 이미지
 
 | 항목 | 위치 |
 |---|---|
-| 프로젝트별 GitHub 링크 (지금은 프로필 주소) | `index.html` — 프로젝트 카드 2곳의 `https://github.com/song0202-g` |
+| 프로젝트별 GitHub 링크 | `index.html` — Project 01 `low-light-enhancement`, Project 02 `inbound-tourism-forecast` 저장소로 연결됨 |
 | 이메일 | `index.html` 첫 화면 인적사항 패널의 Email 줄 |
 
 ## 프로젝트 이미지 · 영상
@@ -37,7 +37,7 @@ images/           ← 프로젝트 결과 이미지
 
 (mp4는 Chrome·Safari·Edge용, webm은 그 외 브라우저용 예비 파일, jpg는 로딩 전 미리보기 이미지입니다.)
 
-**Project 02 (방한 관광 입국 비율 예측)** 는 발표 자료(PDF)에서 잘라낸 그래프 3장이 들어가 있습니다.
+**Project 02 (방한 관광 입국자 수 예측)** 는 분석 노트북에서 저장한 그래프 3장이 들어가 있습니다.
 
 | 파일 | 내용 |
 |---|---|
