@@ -457,7 +457,7 @@ img { display: block; }
     <div class="about-inner">
       <div class="about-text">
         <h2 class="hero-heading section-title fade" data-y="40">About me</h2>
-        <p class="animated-text" id="aboutText">한남대학교에서 AI융합학과를 주전공하고 빅데이터응용학과를 다전공하고 있습니다. 정보처리기사를 취득하고 빅데이터분석기사 필기에 합격해 지금은 실기를 준비하고 있습니다. 저조도 영상 개선과 객체 탐지, 방한 관광 입국 비율의 SARIMA 시계열 예측 프로젝트를 수행하며 데이터를 근거로 모델을 비교하고 선택하는 경험을 쌓았습니다. 데이터로 더 나은 의사결정을 만드는 분석가가 되겠습니다.</p>
+        <p class="animated-text" id="aboutText">한남대학교에서 AI융합학과를 주전공하고 빅데이터응용학과를 다전공하고 있습니다. 정보처리기사를 취득하고 빅데이터분석기사 필기에 합격해 지금은 실기를 준비하고 있습니다. 저조도 영상 개선과 객체 탐지, 방한 관광 입국자 수 SARIMA 시계열 예측 프로젝트를 수행하며 데이터를 근거로 모델을 비교하고 선택하는 경험을 쌓았습니다. 데이터로 더 나은 의사결정을 만드는 분석가가 되겠습니다.</p>
       </div>
     </div>
   </section>
@@ -573,21 +573,21 @@ img { display: block; }
             <span class="card-no">02</span>
             <div class="card-head">
               <span class="card-cat">Time Series · SARIMA · 4인 팀 프로젝트</span>
-              <h3>방한 관광 입국 비율 시계열 예측</h3>
+              <h3>방한 관광 입국자 수 시계열 예측</h3>
             </div>
             <a class="btn-ghost" href="https://github.com/song0202-g" target="_blank" rel="noopener">GitHub</a>
           </div>
           <div class="card-body">
             <div class="card-col">
               <h4>Overview</h4>
-              <p>방한 외래 관광객의 목적별 입국 데이터(관광·상용·공용·유학연수·기타)와 환율 데이터를 결합해, 관광 목적 입국 비율의 시계열 구조를 분석하고 SARIMA로 코로나 이후(Post-COVID) 흐름을 예측했습니다. 1998~2019년 월별 데이터로 학습하고, 코로나 이후 실제값과 비교해 예측 성능을 검증했습니다.</p>
+              <p>방한 외래 관광객의 목적별 입국 데이터(관광·상용·공용·유학연수·기타)와 환율 데이터를 결합해, 관광 목적 월별 입국자 수(로그 변환)의 시계열 구조를 분석하고 SARIMA로 코로나 이후(Post-COVID) 흐름을 예측했습니다. 1998~2019년 월별 데이터로 학습하고, 코로나 이후 실제값과 비교해 예측 성능을 검증했습니다.</p>
             </div>
             <div class="card-col">
               <h4>My Role</h4>
               <ul>
                 <li>ACF/PACF와 차분 분석으로 5개 목적별 시계열 구조 진단 및 정상성 확보</li>
-                <li>AIC 기준 SARIMA 최적 차수 탐색, Post-COVID 구간 예측 및 오차(MAE·RMSE·SMAPE) 평가</li>
-                <li>환율을 외생변수로 넣은 SARIMAX와 비교해 환율 영향 검증</li>
+                <li>auto_arima(AIC 기준)로 SARIMA 최적 차수 탐색, Post-COVID 구간 예측 및 오차(MAE·RMSE·SMAPE) 평가</li>
+                <li>환율을 외생변수로 넣은 SARIMAX로 환율 영향 검증 (계수 유의성)</li>
               </ul>
               <div class="tags"><span>SARIMA / SARIMAX</span><span>ACF / PACF</span><span>AIC</span><span>Seasonality</span></div>
             </div>
@@ -597,45 +597,44 @@ img { display: block; }
           <div class="metrics">
             <div class="metric"><span class="m-label">학습 데이터</span><span class="m-val"><b>264개월</b><i>1998–2019</i></span></div>
             <div class="metric"><span class="m-label">최적 모델</span><span class="m-val"><b class="m-sm">(3,1,1)(0,1,1)<sub>12</sub></b></span></div>
-            <div class="metric"><span class="m-label">예측 오차 SMAPE</span><span class="m-val"><b>3.12%</b><i>MAE 0.43</i></span></div>
+            <div class="metric"><span class="m-label">예측 오차 SMAPE (로그 기준)</span><span class="m-val"><b>3.12%</b><i>MAE 0.43</i></span></div>
             <div class="metric"><span class="m-label">Post-COVID 전망</span><span class="m-val"><b>안정 · 유지</b></span></div>
           </div>
 
           <div class="findings findings-4">
             <div class="finding">
               <span class="f-no">01 · 구조 진단</span>
-              <p>관광을 포함한 모든 목적별 입국 비율에서 강한 자기상관과 12개월 주기의 계절성을 확인했습니다. 1차 차분(d=1)과 계절 차분(D=1) 이후 정상성이 확보되었습니다.</p>
+              <p>관광을 포함한 모든 목적별 입국자 수에서 강한 자기상관과 12개월 주기의 계절성을 확인했습니다. 1차 차분(d=1)과 계절 차분(D=1) 이후 정상성이 확보되었습니다.</p>
             </div>
             <div class="finding">
               <span class="f-no">02 · 모델 선택</span>
-              <p>AIC 기준으로 SARIMA(3,1,1)(0,1,1,12)를 선택했습니다(AIC −468.37). 환율을 외생변수로 추가한 SARIMAX는 AIC가 −430.55로 오히려 나빠졌고 환율 계수도 유의하지 않아(p=0.54), 관광 입국은 환율보다 자체 계절·추세 구조로 더 잘 설명된다고 판단했습니다.</p>
+              <p>auto_arima(AIC 기준)로 차수를 탐색해 SARIMA(3,1,1)(0,1,1,12)를 선택했습니다. 환율을 외생변수로 넣은 SARIMAX에서 환율 계수는 관광(p=0.54)을 포함한 모든 입국 목적에서 유의하지 않아(p=0.28~0.88), 관광 입국은 환율보다 자체 계절·추세 구조로 더 잘 설명된다고 판단했습니다.</p>
             </div>
             <div class="finding">
               <span class="f-no">03 · 예측 결과</span>
-              <p>코로나 이후 실제값 대비 MAE 0.43, RMSE 0.52, SMAPE 3.12%로 예측했습니다. 단기 계절 변동은 있지만 장기적으로는 급격한 상승·하락 없이 2018~2019년 고점 수준에서 완만하게 안정되는 흐름입니다.</p>
+              <p>2023~2024년 실제값 대비 MAE 0.43, RMSE 0.52, SMAPE 3.12%(로그 값 기준)로 예측했습니다. 회복 초기인 2023년 초에는 실제보다 높게 예측했고, 단기 계절 변동은 있지만 장기적으로는 급격한 상승·하락 없이 2018~2019년 고점 수준에서 완만하게 안정되는 흐름입니다.</p>
             </div>
             <div class="finding">
               <span class="f-no">04 · 시사점</span>
-              <p>관광 목적 입국 비율은 회복 국면을 거쳐 안정·유지 단계에 진입했습니다. 앞으로의 관광 정책은 양적 확대보다 체류 질 개선과 고부가가치 관광 전략 중심으로 전환할 필요가 있습니다.</p>
+              <p>관광 목적 입국자 수는 회복 국면을 거쳐 안정·유지 단계에 진입했습니다. 앞으로의 관광 정책은 양적 확대보다 체류 질 개선과 고부가가치 관광 전략 중심으로 전환할 필요가 있습니다.</p>
             </div>
           </div>
 
           <!-- 목적별 모델 요약 -->
           <div class="purpose">
-            <h4>목적별 최적 모델 · Post-COVID 예측 오차</h4>
+            <h4>목적별 최적 모델 · Post-COVID 예측 오차 (로그 값 기준)</h4>
             <div class="purpose-table">
               <div class="pt-row pt-head"><span>입국 목적</span><span>SARIMA 차수</span><span>SMAPE</span></div>
               <div class="pt-row pt-hl"><span>관광 tour</span><span>(3,1,1)(0,1,1,12)</span><span>3.12%</span></div>
               <div class="pt-row"><span>상용 business</span><span>(3,1,1)(2,1,0,12)</span><span>3.01%</span></div>
               <div class="pt-row"><span>공용 public</span><span>(1,1,2)(0,1,1,12)</span><span>2.49%</span></div>
-              <div class="pt-row"><span>유학연수 edu</span><span>(0,1,1)(0,1,1,12)</span><span>1.89%</span></div>
               <div class="pt-row"><span>기타 etc</span><span>(1,1,1)(1,1,1,12)</span><span>2.00%</span></div>
             </div>
           </div>
 
           <div class="charts">
             <div class="charts-l">
-              <figure class="chart"><img src="images/p2-1.png" alt="관광 목적 입국 비율 ACF와 PACF (원계열)" loading="lazy"><figcaption>① 원계열 ACF · PACF — 비정상성</figcaption></figure>
+              <figure class="chart"><img src="images/p2-1.png" alt="관광 목적 입국자 수 ACF와 PACF (원계열)" loading="lazy"><figcaption>① 원계열 ACF · PACF — 비정상성</figcaption></figure>
               <figure class="chart"><img src="images/p2-2.png" alt="1차 차분과 계절 차분 후 ACF와 PACF" loading="lazy"><figcaption>② 차분(d=1, D=1) 후 — 정상성 확보</figcaption></figure>
             </div>
             <figure class="chart chart-main"><img src="images/p2-3.png" alt="SARIMA Post-COVID 예측 결과" loading="lazy"><figcaption>③ SARIMA Post-COVID 예측 — 학습 · 실제 · 예측</figcaption></figure>
@@ -660,7 +659,7 @@ const MARQUEE_ROW_1 = [
 ];
 const MARQUEE_ROW_2 = [
   ['Project 01', '저조도 영상 개선', '직접 구현한 조도 개선 모델과 기존 모델의 성능을 비교해 더 나은 모델을 채택하고, 개선된 영상에 YOLO 객체 탐지를 적용했습니다.'],
-  ['Project 02', '방한 관광 입국 비율 예측', '1998~2019년 목적별 입국 데이터로 SARIMA를 학습해 코로나 이후 흐름을 SMAPE 3.12%로 예측하고, 안정·유지 단계 진입을 확인했습니다.'],
+  ['Project 02', '방한 관광 입국자 수 예측', '1998~2019년 목적별 월별 입국자 수로 SARIMA를 학습해 코로나 이후 흐름을 예측하고(로그 기준 SMAPE 3.12%), 안정·유지 단계 진입을 확인했습니다.'],
 ];
 
 /* ---------- 히어로 제목을 화면 너비에 꼭 맞추기 ---------- */
