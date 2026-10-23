@@ -234,6 +234,11 @@ img { display: block; }
 .skill:hover .skill-no { background-size: 100% 100%; -webkit-text-stroke-color: transparent; }
 .skill-main h3 { font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(1.6rem, 3.6vw, 3.25rem); line-height: 1; margin-bottom: .6rem; }
 .skill-main p { font-weight: 300; line-height: 1.7; max-width: 38rem; font-size: clamp(.875rem, 1.35vw, 1.1rem); color: rgba(12,12,12,.62); word-break: keep-all; }
+.skill-badge {
+  display: inline-block; vertical-align: middle; margin-left: .6rem; padding: .3rem .75rem; border-radius: 9999px;
+  font-size: .75rem; font-weight: 500; letter-spacing: .04em; text-transform: none;
+  border: 1px solid rgba(118,33,176,.45); color: #7621B0; background: rgba(118,33,176,.06);
+}
 .skill-link {
   display: inline-block; margin-top: .9rem; font-size: clamp(.8rem, 1.1vw, .95rem); font-weight: 500;
   color: #0C0C0C; text-decoration: none; border-bottom: 1px solid rgba(12,12,12,.35); padding-bottom: 2px;
@@ -505,10 +510,10 @@ img { display: block; }
       <li class="skill fade" data-delay="0.2">
         <span class="skill-no">03</span>
         <div class="skill-main">
-          <h3>SQL</h3>
-          <p>데이터베이스에서 필요한 데이터를 조회·필터링하고, 조인과 집계로 분석에 바로 쓸 수 있는 데이터셋을 구성합니다.</p>
+          <h3>SQL <span class="skill-badge">학습 중</span></h3>
+          <p>정보처리기사 준비 과정에서 SELECT, JOIN, GROUP BY 등 기본 문법과 데이터베이스 구조를 학습했고, 실습으로 넓혀 가고 있습니다.</p>
         </div>
-        <div class="skill-tags"><span>조회 · 필터링</span><span>JOIN</span><span>집계 · GROUP BY</span></div>
+        <div class="skill-tags"><span>SELECT · WHERE</span><span>JOIN</span><span>GROUP BY</span></div>
       </li>
     </ul>
   </section>
