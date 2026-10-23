@@ -234,6 +234,12 @@ img { display: block; }
 .skill:hover .skill-no { background-size: 100% 100%; -webkit-text-stroke-color: transparent; }
 .skill-main h3 { font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(1.6rem, 3.6vw, 3.25rem); line-height: 1; margin-bottom: .6rem; }
 .skill-main p { font-weight: 300; line-height: 1.7; max-width: 38rem; font-size: clamp(.875rem, 1.35vw, 1.1rem); color: rgba(12,12,12,.62); word-break: keep-all; }
+.skill-link {
+  display: inline-block; margin-top: .9rem; font-size: clamp(.8rem, 1.1vw, .95rem); font-weight: 500;
+  color: #0C0C0C; text-decoration: none; border-bottom: 1px solid rgba(12,12,12,.35); padding-bottom: 2px;
+  transition: color .3s, border-color .3s;
+}
+.skill-link:hover { color: #7621B0; border-color: #7621B0; }
 .skill-tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .4rem; }
 .skill-tags span {
   font-size: .75rem; padding: .35rem .8rem; border-radius: 9999px; white-space: nowrap;
@@ -487,9 +493,10 @@ img { display: block; }
         <span class="skill-no">02</span>
         <div class="skill-main">
           <h3>R</h3>
-          <p>기술통계, 상관·회귀 분석, 가설 검정 등 통계적 방법으로 데이터의 패턴을 검증하고 결과를 근거 있게 해석합니다.</p>
+          <p>탐색적 분석과 전처리(결측 대체·원-핫 인코딩·표준화)를 거쳐 랜덤 포레스트, SVM, 로지스틱 회귀로 분류 모델을 만들고, 혼동행렬과 민감도·특이도로 비교합니다.</p>
+          <a class="skill-link" href="https://github.com/song0202-g/heart-disease-prediction-r" target="_blank" rel="noopener">심장병 여부 예측 프로젝트 (R) <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="skill-tags"><span>통계 분석</span><span>가설 검정</span><span>회귀 분석</span></div>
+        <div class="skill-tags"><span>caret</span><span>분류 모델</span><span>로지스틱 회귀</span></div>
       </li>
       <li class="skill fade" data-delay="0.2">
         <span class="skill-no">03</span>
